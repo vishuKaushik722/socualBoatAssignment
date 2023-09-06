@@ -37,6 +37,12 @@ const MainComponent = () => {
     const dispatch = useDispatch();
 
 
+    const convertToHttps = (url) => {
+      if (url.startsWith('http://')) {
+        return url.replace('http://', 'https://');
+      }
+      return url;
+    }
     useEffect(() => {    
       if (searchQuery.trim() !== '') {
         dispatch(fetchVideos({ searchQuery, numResults }));
@@ -83,7 +89,7 @@ const MainComponent = () => {
                     {videos.results && videos.results.map((video) => (
                         <VideoCard
                             key={video.heading}
-                            videoSrc={video.video} 
+                            videoSrc={convertToHttps(video.video)} 
                             tags={video.tags} 
                             header={video.heading} 
                             description={video.text}

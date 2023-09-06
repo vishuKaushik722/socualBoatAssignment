@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// Define an initial state
 const initialState = {
   data: [],
   loading: 'idle',

@@ -14,7 +14,7 @@
   
   .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio for the video */
+    padding-bottom: 56.25%;
   }
   
   .video-container iframe {
@@ -98,7 +98,6 @@
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
-    /* Styles for tablet devices */
     .card-grid {
       grid-template-columns: 2fr;
   }
