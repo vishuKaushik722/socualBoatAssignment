@@ -72,18 +72,6 @@ const MainComponent = () => {
     }
     return (
         <>
-            <div className='headerText'>
-                <h1>Videos Results</h1>
-                <div>
-                  <p>Enter number of results you want to see: </p>
-                  <input
-                        type="number"
-                        placeholder="Enter Numbers"
-                        value={numResults}
-                        onChange={e => dispatch(changeNumResult(e.target.value))}
-                    />
-                </div>
-            </div>
             <div className="app">
                 <div className="card-grid">
                     {videos.results && videos.results.map((video) => (
