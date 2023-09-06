@@ -1,0 +1,9 @@
+body {
+  background-color: #f5f5f5;
+  font-family: sans-serif;
+}
+.container {
+  padding-top: 6rem;
+  overflow: hidden;
+  padding-bottom: 5rem;
+}

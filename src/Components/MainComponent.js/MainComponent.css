@@ -1,0 +1,105 @@
+ .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for the video */
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    margin: 0 0 10px 0;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .tag {
+    background-color: #36454F;
+    color: #fff;
+    padding: 4px 8px;
+    margin: 4px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+
+  .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+  }  
+
+
+  .headerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .headerText p {
+    display: inline;
+  }
+
+  .headerText input[type="number"] {
+    width: 50px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color: #9dabb5;
+  }
+
+  @media (max-width: 768px) {
+      .card-grid {
+          grid-template-columns: 1fr;
+      }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Styles for tablet devices */
+    .card-grid {
+      grid-template-columns: 2fr;
+  }
+}
